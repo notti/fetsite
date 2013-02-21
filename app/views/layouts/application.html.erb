@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Fetsite</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 
 <div class="header">
 		<h1 style="display:block;float:none">Fachschaft Elektrotechnik</h1>
@@ -17,7 +19,7 @@
 	<div id="menudiv"><%= render :template => 'layouts/menu' %></div>
 	</div>	<div class="span10">
 	
-		<%= yield %>
+			<%= yield %>
 	</div>
 </div>
 </body>

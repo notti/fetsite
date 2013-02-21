@@ -2,12 +2,23 @@ Fetsite::Application.routes.draw do
 
 
 
+  resources :beispiele
+
+
   devise_for :users
+
 scope '(:locale)/admin' do
 resources :users
+get 'config',:controller=>:config,:action=>:index , :as => 'config'
+get 'config/get_git_update',:controller=>:config,:action=>:get_git_update, :as=>'config_getgitupdate'
+
+
+get 'config/get_git_update',:controller=>:config,:action=>:get_git_update
+
+
 end
 
-
+devise_for :users
 
 
   scope '(:locale)' do
@@ -24,11 +35,8 @@ end
     resources :neuigkeiten
     resources :rubriken
 
-
-
-put 'rubriken/(:id)/addmoderator',:controller=>:rubriken,:action=>:addmoderator
-
-
+    put 'rubriken/(:id)/addmoderator',:controller=>:rubriken,:action=>:addmoderator
+    get 'rubriken/:id/verwalten',:controller=>:rubriken,:action=>:verwalten, :as=>'verwalten_rubrik'
     resources :home
 
 

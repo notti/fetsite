@@ -2,23 +2,31 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 de:
   hello: "Hallo Welt"
-  
+  common:
+    edit: "Bearbeiten"
+    actions: "Aktionen"
+    
   studien:
     list: "Studien der Fakultät Elektrotechnik"
     new: "Neues Studium"
+    newmodulgroup: "Neue Modulgruppe"
+    allestudien: "Alle Studien"
   modul:
     edit: 
       title: "Bearbeite Modul"
+      
   modulgruppe:
     typ: "Typ"
+    addmodul: "Neues Modul hinzufügen"
+    studium: "Studium"
+    
   home:
     mtitle: "Menu"
     hallobeiderfet: "Du bist auf er Seite der Fachschaft Elektrotechnik der TU Wien"
     home: "Startseite"
     studien: "Studien"
-    news: "News"
+    news: "Neuigkeiten"
     info: "Information"
-
   rubrik:
     moderatoradded: "Neuen Moderator hinzugefügt!"
     moderatoraddnorights: "Keine Berechtigung neue Moderatoren hinzuzufügen!"

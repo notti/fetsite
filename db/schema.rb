@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124223508) do
+ActiveRecord::Schema.define(:version => 20130214233723) do
+
+  create_table "beispiel_translations", :force => true do |t|
+    t.string   "locale"
+    t.text     "desc"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "beispiele_id"
+  end
+
+  add_index "beispiel_translations", ["locale"], :name => "index_beispiel_translations_on_locale"
+
+  create_table "beispiele", :force => true do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.integer  "lva_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
 
   create_table "lva_translations", :force => true do |t|
     t.integer  "lva_id"
